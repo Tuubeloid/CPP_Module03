@@ -1,30 +1,29 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.cpp                                           :+:      :+:    :+:   */
+/*   FragTrap.hpp                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: tvalimak <tvalimak@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/10/04 05:16:49 by tvalimak          #+#    #+#             */
+/*   Created: 2024/10/04 05:31:15 by tvalimak          #+#    #+#             */
 /*   Updated: 2024/10/04 05:34:29 by tvalimak         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#ifndef FRAGTRAP_HPP
+#define FRAGTRAP_HPP
+
 #include "ClapTrap.hpp"
-#include "ScavTrap.hpp"
 
-int main() {
-    ClapTrap clap("CL4P-TP");
-    ScavTrap scav("SC4V-TP");
+class FragTrap : public ClapTrap {
+public:
+    FragTrap(const std::string& name);
+    ~FragTrap();
+    FragTrap(const FragTrap& other);
+    FragTrap& operator=(const FragTrap& other);
 
-    clap.attack("target dummy");
-    clap.takeDamage(5);
-    clap.beRepaired(3);
+    void attack(const std::string& target); // Override attack
+    void highFivesGuys(); // Unique function for FragTrap
+};
 
-    scav.attack("target dummy");
-    scav.takeDamage(20);
-    scav.beRepaired(10);
-    scav.guardGate();
-
-    return 0;
-}
+#endif // FRAGTRAP_HPP

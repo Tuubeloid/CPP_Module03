@@ -12,10 +12,12 @@
 
 #include "ClapTrap.hpp"
 #include "ScavTrap.hpp"
+#include "FragTrap.hpp"
 
 int main() {
     ClapTrap clap("CL4P-TP");
     ScavTrap scav("SC4V-TP");
+    FragTrap frag("FR4G-TP");
 
     clap.attack("target dummy");
     clap.takeDamage(5);
@@ -25,6 +27,11 @@ int main() {
     scav.takeDamage(20);
     scav.beRepaired(10);
     scav.guardGate();
+
+    frag.attack("target dummy");
+    frag.takeDamage(40);
+    frag.beRepaired(20);
+    frag.highFivesGuys();
 
     return 0;
 }
