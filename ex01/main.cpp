@@ -6,7 +6,7 @@
 /*   By: tvalimak <tvalimak@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/04 05:16:49 by tvalimak          #+#    #+#             */
-/*   Updated: 2024/10/04 05:34:29 by tvalimak         ###   ########.fr       */
+/*   Updated: 2024/10/07 11:21:40 by tvalimak         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,6 +20,7 @@ int main() {
     clap.attack("target dummy");
     clap.takeDamage(5);
     clap.beRepaired(3);
+    //clap.guardGate(); // Error: 'class ClapTrap' has no member named 'guardGate'
 
     scav.attack("target dummy");
     scav.takeDamage(20);

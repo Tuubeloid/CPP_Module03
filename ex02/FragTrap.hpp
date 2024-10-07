@@ -6,7 +6,7 @@
 /*   By: tvalimak <tvalimak@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/04 05:31:15 by tvalimak          #+#    #+#             */
-/*   Updated: 2024/10/04 05:34:29 by tvalimak         ###   ########.fr       */
+/*   Updated: 2024/10/07 11:28:46 by tvalimak         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,6 +23,8 @@ public:
     FragTrap& operator=(const FragTrap& other);
 
     void attack(const std::string& target); // Override attack
+    void takeDamage(unsigned int amount);
+    void beRepaired(unsigned int amount);
     void highFivesGuys(); // Unique function for FragTrap
 };
 

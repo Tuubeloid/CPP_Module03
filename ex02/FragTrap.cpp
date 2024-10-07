@@ -6,7 +6,7 @@
 /*   By: tvalimak <tvalimak@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/04 05:31:30 by tvalimak          #+#    #+#             */
-/*   Updated: 2024/10/04 05:34:29 by tvalimak         ###   ########.fr       */
+/*   Updated: 2024/10/07 11:28:33 by tvalimak         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -45,6 +45,24 @@ void FragTrap::attack(const std::string& target) {
                   << ", causing " << attackDamage << " points of damage!" << std::endl;
     } else {
         std::cout << "FragTrap " << name << " has no energy or hit points left to attack!" << std::endl;
+    }
+}
+
+void FragTrap::takeDamage(unsigned int amount) {
+    hitPoints -= amount;
+    if (hitPoints < 0) hitPoints = 0;
+    std::cout << "FragTrap " << name << " takes " << amount << " points of damage! "
+              << "Remaining hit points: " << hitPoints << std::endl;
+}
+
+void FragTrap::beRepaired(unsigned int amount) {
+    if (energyPoints > 0 && hitPoints > 0) {
+        hitPoints += amount;
+        energyPoints--;
+        std::cout << "FragTrap " << name << " repairs itself, regaining "
+                  << amount << " hit points!" << std::endl;
+    } else {
+        std::cout << "FragTrap " << name << " has no energy or hit points left to repair itself!" << std::endl;
     }
 }
 

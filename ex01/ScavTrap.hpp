@@ -6,7 +6,7 @@
 /*   By: tvalimak <tvalimak@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/04 05:15:59 by tvalimak          #+#    #+#             */
-/*   Updated: 2024/10/04 05:34:29 by tvalimak         ###   ########.fr       */
+/*   Updated: 2024/10/07 11:20:03 by tvalimak         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,9 @@ public:
     ScavTrap(const ScavTrap& other);
     ScavTrap& operator=(const ScavTrap& other);
 
-    void attack(const std::string& target); // Override attack
+    void attack(const std::string& target);
+    void takeDamage(unsigned int amount);
+    void beRepaired(unsigned int amount);
     void guardGate(); // Unique function for ScavTrap
 };
 

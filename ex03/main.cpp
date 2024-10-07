@@ -6,32 +6,31 @@
 /*   By: tvalimak <tvalimak@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/04 05:16:49 by tvalimak          #+#    #+#             */
-/*   Updated: 2024/10/04 05:34:29 by tvalimak         ###   ########.fr       */
+/*   Updated: 2024/10/07 15:33:48 by tvalimak         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ClapTrap.hpp"
 #include "ScavTrap.hpp"
 #include "FragTrap.hpp"
+#include "DiamondTrap.hpp"
 
 int main() {
-    ClapTrap clap("CL4P-TP");
-    ScavTrap scav("SC4V-TP");
-    FragTrap frag("FR4G-TP");
+    std::cout << "===== Creating DiamondTrap =====" << std::endl;
+    DiamondTrap dt("Diamond");
 
-    clap.attack("target dummy");
-    clap.takeDamage(5);
-    clap.beRepaired(3);
+    std::cout << "\n===== Testing attack =====" << std::endl;
+    dt.attack("Target");
 
-    scav.attack("target dummy");
-    scav.takeDamage(20);
-    scav.beRepaired(10);
-    scav.guardGate();
+    std::cout << "\n===== Testing takeDamage =====" << std::endl;
+    dt.takeDamage(30);
 
-    frag.attack("target dummy");
-    frag.takeDamage(40);
-    frag.beRepaired(20);
-    frag.highFivesGuys();
+    std::cout << "\n===== Testing beRepaired =====" << std::endl;
+    dt.beRepaired(20);
 
+    std::cout << "\n===== Testing whoAmI =====" << std::endl;
+    dt.whoAmI();
+
+    std::cout << "\n===== Destroying DiamondTrap =====" << std::endl;
     return 0;
 }
