@@ -6,15 +6,15 @@
 /*   By: tvalimak <tvalimak@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/04 04:58:29 by tvalimak          #+#    #+#             */
-/*   Updated: 2024/10/04 05:18:58 by tvalimak         ###   ########.fr       */
+/*   Updated: 2024/10/28 18:42:34 by tvalimak         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef CLAPTRAP_HPP
-#define CLAPTRAP_HPP
+# define CLAPTRAP_HPP
 
-#include <string>
-#include <iostream>
+# include <string>
+# include <iostream>
 
 class ClapTrap {
 protected:
@@ -29,7 +29,7 @@ public:
     ClapTrap(const ClapTrap& other);
     ClapTrap& operator=(const ClapTrap& other);
 
-    void attack(const std::string& target);
+    virtual void attack(const std::string& target);
     void takeDamage(unsigned int amount);
     void beRepaired(unsigned int amount);
 };

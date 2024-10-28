@@ -6,14 +6,14 @@
 /*   By: tvalimak <tvalimak@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/04 05:31:15 by tvalimak          #+#    #+#             */
-/*   Updated: 2024/10/07 15:30:35 by tvalimak         ###   ########.fr       */
+/*   Updated: 2024/10/28 18:42:45 by tvalimak         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef FRAGTRAP_HPP
-#define FRAGTRAP_HPP
+# define FRAGTRAP_HPP
 
-#include "ClapTrap.hpp"
+# include "ClapTrap.hpp"
 
 class FragTrap : virtual public ClapTrap {
 public:

@@ -6,14 +6,14 @@
 /*   By: tvalimak <tvalimak@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/04 05:15:59 by tvalimak          #+#    #+#             */
-/*   Updated: 2024/10/07 15:30:52 by tvalimak         ###   ########.fr       */
+/*   Updated: 2024/10/28 18:42:48 by tvalimak         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef SCAVTRAP_HPP
-#define SCAVTRAP_HPP
+# define SCAVTRAP_HPP
 
-#include "ClapTrap.hpp"
+# include "ClapTrap.hpp"
 
 class ScavTrap : virtual public ClapTrap {
 public:
